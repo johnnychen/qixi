@@ -1,79 +1,235 @@
-<!DOCTYPE html>
-<html>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Qixi : qixi for qinxin">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<!doctype html>
+<html lang="ch" manifest="/appcache/act/3464?_t=1404174889">
+<head>
+	<title>沁心</title>
+	<meta charset="utf-8" />
+	<meta name="apple-touch-fullscreen" content="YES" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="pragram" content="no-cache" />
+	<link rel="stylesheet" type="text/css" href="css/copyright.css?1376447814" />
+	<link rel="stylesheet" type="text/css" href="css/main.css?1404135436" />
+	<link rel="stylesheet" type="text/css" href="css/add2home.css?1397525361" />
+	<script type="text/javascript" src="js/offline.js?1397525361" ></script>	<!--移动端版本兼容 -->
+	<script type="text/javascript">
+		var phoneWidth = parseInt(window.screen.width);
+		var phoneScale = phoneWidth/640;
 
-    <title>Qixi</title>
-  </head>
+		var ua = navigator.userAgent;
+		if (/Android (\d+\.\d+)/.test(ua)){
+			var version = parseFloat(RegExp.$1);
+			// andriod 2.3
+			if(version>2.3){
+				document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+				// andriod 2.3以上
+			}else{
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+			// 其他系统
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+	<!--移动端版本兼容 end -->
+</head>
 
-  <body>
+<body class='s-bg-ddd'>
+<!--模版加载提示-->
+<section class="u-alert">
+	<img style='display:none;' src="img/loading_large.gif" />
+	<div class='alert-loading z-move'>
+		<div class='cycleWrap'>
+			<span class='cycle cycle-1'></span>
+			<span class='cycle cycle-2'></span>
+			<span class='cycle cycle-3'></span>
+			<span class='cycle cycle-4'></span>
+		</div>
+		<div class="lineWrap">
+			<span class='line line-1'></span>
+			<span class='line line-2'></span>
+			<span class='line line-3'></span>
+		</div>
+	</div>
+</section>
+<!--模版加载提示 end-->
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/johnnychen/qixi">View on GitHub</a>
+<!-- 声音控件 -->
+<section class='u-audio f-hide' data-src='four_girls.mp3'>
+	<p id='coffee_flow' class="btn_audio">
+		<strong class='txt_audio z-hide'>关闭</strong>
+		<span class='css_sprite01 audio_open'></span>
+	</p>
+</section>
+<!-- 声音控件 end-->
+<!-- 箭头指示引导 -->
+<section class='u-arrow f-hide'><p class="css_sprite01"></p></section>
+<!-- 箭头指示引导 end-->
 
-          <h1 id="project_title">Qixi</h1>
-          <h2 id="project_tagline">qixi for qinxin</h2>
+<!-- page页面内容 -->
+<section class='p-ct'>
+<!-- 旋转正面 -->
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/johnnychen/qixi/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/johnnychen/qixi/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+<!-- 旋转正面 end-->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<!-- 旋转反面 -->
+<div class='translate-back f-hide'>
+	<!-- 封页 1-->
+	<!-- 擦一擦 --><input id="ca-tips"   type="hidden" value="" />
+	<!-- 蒙板背景图 --><input id="r-cover"    type="hidden" value='img/14.jpg' />
+	<div class='m-page m-fengye f-hide' data-page-type='info_pic3' data-statics='info_pic3'>
+		<div class="page-con lazy-img" data-src='dong/hi.jpg'></div>
+	</div>
+	<!-- 封页 end-->
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/xiaojiang.jpg'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/hao.jpg'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/grape.jpg'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
+	
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/xiexie.jpg'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/bukaixin.jpg?t=v2'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/niunai.jpg'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/mianbao.jpg'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/sea.jpg'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/you.jpg?t=1'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/fly.jpg'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/congming.jpg'>
+		</div>
+	</div>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/mengxiang.jpg'>
+		</div>
+	</div>
+	
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/girl.jpg'>
+		</div>
+	</div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Qixi maintained by <a href="https://github.com/johnnychen">johnnychen</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
 
-    
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/qixi.jpg'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
+	<!-- 大图文 3-->
+	<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+		<div class="page-con j-txtWrap lazy-img" data-src='dong/happy.jpg'>
+		</div>
+	</div>
+	<!-- 大图文 end-->
 
-  </body>
+</div>
+<!-- 旋转反面 end-->
+</section>
+<!-- 正文介绍 end-->
+
+<!-- lightapp入口 -->
+
+<div class='market-page f-hide' data-action='Action://lightapp_close'>
+	<div class='market-img'>
+
+		<a href='tel:13146158666'>
+			<img src='img/market-tel.png'/>
+		</a>
+	</div>
+</div>
+<!-- lightapp入口 end-->
+<!--pageLoading-->
+<section class="u-pageLoading">
+	<img src="img/load.gif" alt="loading" />
+</section>
+<!--pageLoading end-->
+
+
+
+<!-- 资源传递 -->
+<!-- 模版ID --><input id="activity_id" type="hidden" value='3464' />
+<!-- 微信分享信息 --><input id="r-wx-title" type="hidden" value="性感不是风骚" />
+<!-- 微信分享信息 --><input id="r-wx-img"   type="hidden" value="http://fjqz.com.cn/fangti2/img/tuisong.jpg" />
+<!-- 微信分享信息 --><input id="r-wx-con"   type="hidden" value="拉近世界的距离" />
+
+
+<!-- 资源传递 end-->
+
+<!--脚本加载-->
+<script src="js/init.mix.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/weixin.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/coffee.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/10_ylMap.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/Lottery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/99_main.js?1404174889" type="text/javascript" charset="utf-8" defer＝'defer'></script>
+<!--脚本加载 end-->
+</body>
 </html>
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb000937f7c96c2a95f554fc1388f291e' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
